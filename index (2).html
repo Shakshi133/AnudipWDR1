@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shakshi | Portfolio</title>
+  <style>
+    
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #9333ea, #06b6d4);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      overflow-x: hidden;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      opacity: 0.9;
+    }
+
+    .typing {
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 3s steps(30, end), blink 0.8s infinite;
+    }
+    @keyframes typing { from {width: 0;} to {width: 100%;} }
+    @keyframes blink { 50% {border-color: transparent;} }
+
+  
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+  
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+      animation: fadeInUp 1.2s ease;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #ffdd57;
+    }
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s, background 0.4s;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      background: rgba(255,255,255,0.2);
+    }
+
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #ffdd57;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #fbbf24;
+    }
+
+    
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(0,0,0,0.4);
+      margin-top: 40px;
+    }
+
+    
+    @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+    @keyframes fadeInUp {from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="typing">Hi, I'm Shakshi 👩‍💻</h1>
+    <p>MCA • Rank 1 • Data Engineering • ML Engineering • Data Analysis</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center;max-width:800px;margin:auto;">
+      I am an MCA graduate (Rank 1 🏆), with 2+ years of teaching experience and a passion for Data Engineering, Machine Learning, and AI.  
+      I also led the Art & Craft society as Head Coordinator 🎨.  
+      My goal is to build AI-driven solutions that create real impact 🚀.
+    </p>
+  </section>
+
+ 
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Programming</h3><p>Python, R, Java, SQL, KQL</p></div>
+      <div class="card"><h3>Big Data</h3><p>Spark, Hadoop, Kafka</p></div>
+      <div class="card"><h3>ML & AI</h3><p>Scikit-learn, NLP, Deep Learning, Gen AI, LLMs</p></div>
+      <div class="card"><h3>Visualization</h3><p>Pandas, NumPy, Power BI, Tableau</p></div>
+      <div class="card"><h3>Tools</h3><p>Docker, Jenkins, GitHub, VS Code</p></div>
+      <div class="card"><h3>Deployment</h3><p>Streamlit, Heroku</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>AI Interview Coach</h3><p>AI-powered interview preparation app with ML/DL & NLP insights.</p></div>
+      <div class="card"><h3>Stenography App</h3><p>Secure text/image embedding using Flask + Tkinter.</p></div>
+      <div class="card"><h3>Course Recommendation Website</h3><p>ML-based course recommendation system with interactive UI.</p></div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message 🚀</button>
+    </form>
+    <p style="text-align:center;margin-top:15px;">Or email me at: <b>shakshi.kiheat@gmail.com</b></p>
+  </section>
+
+  
+  <footer>
+    <p>© 2025 Shakshi |</p>
+  </footer>
+
+  <script>
+    function sendMessage(event){
+      event.preventDefault();
+      alert("Thank you! Your message has been sent ✅");
+    }
+  </script>
+
+</body>
+</html>
